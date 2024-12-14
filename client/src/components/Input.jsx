@@ -8,7 +8,10 @@ import { conversationAtom } from "../store/atoms/conversation";
 export default function Input({ placeholder }) {
   const [value, setValue] = useState("");
   const textareaRef = useRef(null);
-  const backendUrl = 'http://localhost:2738';
+  // for Development uncomment this.
+  // const backendUrl = 'http://localhost:2738'; 
+  // for Production. (comment out for dev.)
+  const backendUrl = 'https://retrogpt-backend.onrender.com';
 
   useEffect(() => {
     if (textareaRef.current) {
