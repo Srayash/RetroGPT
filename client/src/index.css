@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply bg-[url('./assets/background.gif')]
+
+}
