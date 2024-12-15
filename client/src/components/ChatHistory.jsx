@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil"
 import { conversationAtom } from "../store/atoms/conversation"
-import QuestionLog from "./questionLog";
-import ResponseLog from "./responseLog";
+import QuestionLog from "./QuestionLog";
+import ResponseLog from "./ResponseLog";
 
 export default function ChatHistory(){
     const conversation = useRecoilValue(conversationAtom);
