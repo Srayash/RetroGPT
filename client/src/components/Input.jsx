@@ -35,7 +35,6 @@ export default function Input({ placeholder }) {
       body: JSON.stringify({ question: value })
     })
     const answer = await response.json();
-    console.log(answer);
     setConversation([...conversation,{role: 'user', content: value}, answer.choices[0].message]);
   }
 

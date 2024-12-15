@@ -1,31 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Jersey+10&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .scrollbar::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
-  }
+body{
+  @apply bg-[url('./assets/background.gif')]
+}
 
-  .scrollbar::-webkit-scrollbar-track {
-    border-radius: 100vh;
-    background: #f7f4ed;
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
   }
-
-  .scrollbar::-webkit-scrollbar-thumb {
-    background: #e0cbcb;
-    border-radius: 100vh;
-    border: 3px solid #f6f7ed;
+  50% {
+    transform: translateX(0%);
   }
-
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #c0a0b9;
+  100% {
+    transform: translateX(-100%);
   }
 }
 
-body{
-  @apply bg-[url('./assets/background.gif')]
-
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  width: 100%;
 }

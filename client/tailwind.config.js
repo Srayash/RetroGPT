@@ -8,7 +8,7 @@ export default  {
     extend: {
       fontFamily: {
         jersey: ['"Jersey 10"', 'serif'],
-        pressStart: ['"Press Start 2P"', 'system-ui']
+        comingSoon: ['"Coming Soon"', 'cursive']
       },
     },
   },
