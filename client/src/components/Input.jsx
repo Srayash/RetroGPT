@@ -36,6 +36,7 @@ export default function Input({ placeholder }) {
     })
     const answer = await response.json();
     setConversation([...conversation,{role: 'user', content: value}, answer.choices[0].message]);
+    setValue('');
   }
 
   const setErrorState = useSetRecoilState(errorStateAtom);
