@@ -3,6 +3,7 @@ import { useSetRecoilState } from "recoil";
 import { errorStateAtom } from "../store/atoms/errorState";
 import errorSound from "../assets/error.mp3";
 import { useEffect } from "react";
+import { viruStateAtom } from "../store/atoms/virusState";
 const EXIT_URL = "https://64.media.tumblr.com/b22e49d8f52d0e90857458021399339d/63c60cacbd7469c6-f8/s540x810/672e574b011045df3ff463ddc3ddc98f88725fbd.png"
 
 export default function ErrorModal({title, description}){
@@ -10,21 +11,22 @@ export default function ErrorModal({title, description}){
     const playErrorSound = () => {
         new Audio(errorSound).play();
     }
-
     useEffect(()=>{
         playErrorSound();
-    }, [])
+    })
 
     const setErrorState = useSetRecoilState(errorStateAtom);
+    const setVirusState = useSetRecoilState(viruStateAtom);
 
     const toggleHandler = () => {
-        setErrorState(false)
+        setErrorState(false);
+        setVirusState(false);
     }
 
     return (
         <>
             <div 
-                className={`absolute z-10 min-w-[400px] h-[200px] bg-amber-100 border-4 border-blue-700`}
+                className={`absolute z-10 w-[400px] h-[200px] bg-amber-100 border-4 border-blue-700`}
                 style={{ top: Math.random() * (window.innerHeight - 200), left: Math.random() * (window.innerWidth - 400) }}
             >
                 <div className="flex justify-between py-1 text-2xl font-semibold bg-blue-700">

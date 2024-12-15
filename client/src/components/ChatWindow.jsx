@@ -5,7 +5,7 @@ import ChatHistory from "./ChatHistory";
 
 export default function ChatWindow(){
     return <>
-      <div className=" mt-5 bg-[#b5b8b5] p-2 border-4 border-t-white border-l-white border-r-[#808080] border-b-[#808080]">
+      <div className="w-full mt-5 bg-[#b5b8b5] p-2 border-4 border-t-white border-l-white border-r-[#808080] border-b-[#808080]">
         <TabBar title={"Message RetroGPT"} />
         <div className="flex gap-2">
           <ChatHistory />
