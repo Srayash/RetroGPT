@@ -16,7 +16,7 @@ export default function Home(){
 
 
     return <>
-        <div className="flex p-5 flex-col items-center">
+        <div className="flex p-5 flex-col items-center overflow-x-hidden">
              <div className="flex gap-2">
                 <img className = "h-[60px] md:h-[100px]" src={AlienBanner} />
                 <img className="md:w-auto w-[250px]" src={RetroGpt} />
