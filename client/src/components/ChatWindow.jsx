@@ -7,10 +7,10 @@ export default function ChatWindow(){
     return <>
       <div className="w-full mt-5 bg-[#b5b8b5] p-2 border-4 border-t-white border-l-white border-r-[#808080] border-b-[#808080]">
         <TabBar title={"Message RetroGPT"} />
-        <div className="flex gap-2">
+        <div className="flex md:flex-row flex-col gap-2">
           <ChatHistory />
           <div>
-            <img className="w-[386px] min-w-[386px] border-2 border-b-white border-r-white border-l-[#808080] border-t-[#808080]" src={Brain} />
+            <img className=" hidden md:block w-[386px] min-w-[386px] border-2 border-b-white border-r-white border-l-[#808080] border-t-[#808080]" src={Brain} />
             <Input placeholder={">_Type your message"} />
           </div>
         </div>
